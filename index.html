@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" md:h-screen w-full">
+    <div class="">
+        <h1 class="p-5 text-center w-full bg-blue-950 font-bold text-[28px] text-[#b78260]">Add a new transaction:</h1>
+        <div class="bg-[#b78260]">
+            <div class="flex flex-row items-start justify-center gap-20 p-6">
+                <div class="flex gap-2 font-semibold">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">Choose One
+                        <option value="Income">Income</option>
+                        <option value="Expense">Expense</option>
+                    </select>
+                </div>
+                <div class="flex items-end flex-col">
+                    <div class="flex gap-2 font-semibold">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div><br>
+                    <div class="flex gap-2 font-semibold">
+                        <label for="amount">Amount:</label>
+                        <input type="text" id="amount" name="amount" required>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-3">
+                <button onclick="handleSubmit()" class="bg-blue-950 p-2 font-normal text-[#b78260] border-2 border-black rounded-sm text-[20px]">Add to transactions</button>
+            </div>
+            <div class="h-[100px] w-full bg-blue-600">
+            </div>
+            <table class=" w-full border-2 border-blue-600 ">
+                <tr class="">
+                    <td class="p-3 font-semibold">Type</td>
+                    <td class="p-3 font-semibold">Name</td>
+                    <td class="p-3 font-semibold">Amount</td>
+                    <td class="p-3 font-semibold">Options</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
